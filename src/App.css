@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.profile{
+  box-shadow: 10px 12px 23px 0px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 10px 12px 23px 0px rgba(0,0,0,0.65);
+  -moz-box-shadow: 10px 12px 23px 0px rgba(0,0,0,0.65);
+  width: 250px;
+  height: 320px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin-bottom: 10px;
+}
+
+.newTag{
+  background-color: aquamarine;
+  font-weight: bold;
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.avatar_container{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.avatar{
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
