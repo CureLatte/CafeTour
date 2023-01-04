@@ -75,3 +75,66 @@
   margin-bottom: 10px;
   object-fit: cover;
 }
+
+/* counter setting */
+.counter{
+  width: 50%;
+  height: 200px;
+  border: bisque solid 5px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em 1em;
+  margin: 0 auto 1em auto;
+}
+
+.counter:hover{
+  background-color: antiquewhite;
+}
+
+.number{
+  margin: auto;
+  font-size: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: end;
+  width: 50%;
+  height: 40%;
+}
+
+.currentCount{
+  width: 30%;
+  height: 100%;
+}
+
+.allCount{
+  width: 30%;
+  height: 100%;
+  font-size: 0.5em;
+  alignment: bottom;
+  vertical-align: bottom;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.button{
+  margin: auto;
+  font-size: 1.5rem;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 2px black solid;
+  border-radius: 0.5rem;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,9,121,1) 49%, rgba(0,212,255,1) 100%);
+}
+
+/* Counter banner */
+.CounterStatus{
+  width: 350px;
+  height: 60px;
+  background-color: lightgoldenrodyellow;
+}
