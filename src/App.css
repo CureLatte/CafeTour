@@ -78,8 +78,8 @@
 
 /* counter setting */
 .counter{
-  width: 50%;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   border: bisque solid 5px;
   border-radius: 1rem;
   display: flex;
@@ -96,18 +96,22 @@
 
 .number{
   margin: auto;
-  font-size: 5rem;
+  font-size: 5em;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: end;
   width: 50%;
   height: 40%;
 }
 
 .currentCount{
+  display: inline-block;
   width: 30%;
   height: 100%;
+  justify-content: end;
+  text-align: end;
+  padding-right:1rem;
 }
 
 .allCount{
@@ -118,6 +122,7 @@
   vertical-align: bottom;
   text-align: center;
   padding-top: 1em;
+  padding-left: 0.5rem;
 }
 
 .button{
@@ -134,7 +139,22 @@
 
 /* Counter banner */
 .CounterStatus{
-  width: 350px;
-  height: 60px;
+  width: 500px;
+  height: 40px;
   background-color: lightgoldenrodyellow;
+  margin: 3rem auto;
+  font-size: 2em;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  vertical-align: center;
+  line-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.overCount{
+  justify-content: end;
+
 }

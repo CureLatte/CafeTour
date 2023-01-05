@@ -6,7 +6,9 @@ export default function Counter({allCount, setAllCount}){
     return (
         <div className='counter'>
             <span className='number'>
-                <span className='currentCount'>{number}</span>
+                <span className='currentCount'>
+                    {number}
+                </span>
                 <span className='allCount'>/{allCount}</span>
             </span>
             <button className='button' onClick={()=>{
