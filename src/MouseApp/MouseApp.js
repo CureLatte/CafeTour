@@ -13,8 +13,8 @@ function MouseApp() {
 
     const updateXY = ()=>{
         const pointer = document.getElementsByClassName('pointer')[0]
-        pointer.style.left = mouseX + 'px'
-        pointer.style.top = mouseY + 'px'
+        pointer.style.left = (mouseX - 15) + 'px'
+        pointer.style.top = (mouseY - 15) + 'px'
     }
     useEffect(updateXY, [mouseX, mouseY])
     return (
