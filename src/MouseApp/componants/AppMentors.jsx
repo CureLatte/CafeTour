@@ -41,7 +41,7 @@ export default function ç() {
                             }
                         }
                         console.log(prev_person)
-                        return prev_person
+                        return {...prev_person}
                     })
                 }}
             >
