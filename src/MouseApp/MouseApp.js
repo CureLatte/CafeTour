@@ -5,21 +5,13 @@ function MouseApp() {
     const [mouseX, setMouseX] = useState(0)
     const [mouseY, setMouseY] = useState(0)
 
-    const getXY = (event)=>{
-        setMouseX(event.clientX)
-        setMouseY(event.clientY)
+    const updateXY = (e)=>{
+        setMouseX(e.clientX)
+        setMouseY(e.clientY)
     }
-
-
-    const updateXY = ()=>{
-        const pointer = document.getElementsByClassName('pointer')[0]
-        pointer.style.left = (mouseX - 15) + 'px'
-        pointer.style.top = (mouseY - 15) + 'px'
-    }
-    useEffect(updateXY, [mouseX, mouseY])
     return (
-        <div className="container" onMouseMove={getXY}>
-            <div className="pointer"></div>
+        <div className="container" onPointerMove={updateXY}>
+            <div className="pointer" style={{transform: `translate(${mouseX}px, ${mouseY}px)`}}></div>
         </div>
     );
 }

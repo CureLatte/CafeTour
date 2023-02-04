@@ -28,7 +28,8 @@
       "react-app/jest"
     ],
     "rules": {
-      "indent": ["error", 4]
+      "indent": ["error", 4],
+      "no-unused-vars": ["warn", { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }]
     }
   },
   "browserslist": {
