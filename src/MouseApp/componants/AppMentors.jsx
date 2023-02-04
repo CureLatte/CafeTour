@@ -32,17 +32,12 @@ export default function ç() {
                 onClick={() => {
                     const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
                     const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-                    setPerson((prev_person)=>{
-
-                        for(let i in prev_person.mentors){
-                            if (prev_person.mentors[i].name === prev){
-                                prev_person.mentors[i].name = current
-                                console.log(prev_person.mentors[i].name)
-                            }
+                    setPerson((prev_person)=>({...prev_person, mentors: prev_person.mentors.map((mentor)=>{
+                        if(mentor.name === prev){
+                            return {...mentor, name:current}
                         }
-                        console.log(prev_person)
-                        return {...prev_person}
-                    })
+                        return {...mentor}
+                    })}))
                 }}
             >
         멘토의 이름을 바꾸기
