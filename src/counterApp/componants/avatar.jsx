@@ -3,8 +3,8 @@ export default function Avatar(props){
         <div className="avatar_container">
             {props.new && <span className="newTag">New</span>}
             <img className="avatar"
-             src={props.url}
-             alt="avatar"
+                src={props.url}
+                alt="avatar"
             />
         </div>
     );
