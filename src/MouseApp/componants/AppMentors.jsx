@@ -15,6 +15,21 @@ export default function ç() {
             },
         ],
     });
+
+    const addMentor = ()=>{
+        const name = prompt('what is new mentor name?')
+        const title = prompt('what is mentor title?')
+
+        setPerson((prev)=>({...prev, mentors: [...prev.mentors, {name: name, title:title}]}))
+
+    }
+    
+    const deleteMentor = ()=>{
+        const name = prompt('what is new mentor name?')
+        
+        setPerson((prev)=>({...prev, mentors: prev.mentors.filter(mentor=>mentor.name !== name)}))
+    }
+
     return (
         <div>
             <h1>
@@ -40,7 +55,13 @@ export default function ç() {
                     })}))
                 }}
             >
-        멘토의 이름을 바꾸기
+                멘토의 이름을 바꾸기
+            </button>
+            <button onClick={addMentor}>
+                멘토 이름 추가
+            </button>
+            <button onClick={deleteMentor}>
+                멘토 이름 삭제
             </button>
         </div>
     );
