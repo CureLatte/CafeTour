@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState} from "react";
+import { useState} from "react";
 
 function MouseApp() {
     const [mouseX, setMouseX] = useState(0)

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useReducer} from 'react';
+import personReducer from './reducer/person_reducer'
 
-export default function() {
-    const [person, setPerson] = useState({
+export default function AppMentors() {
+    const initialPerson = {
         name: '엘리',
         title: '개발자',
         mentors: [
@@ -14,31 +15,27 @@ export default function() {
                 title: '시니어개발자',
             },
         ],
-    });
+    }
+
+    const [person, dispatch] = useReducer(personReducer, initialPerson)
+
 
     const updateMentor = () => {
         const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
         const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-        setPerson((prev_person)=>({...prev_person, mentors: prev_person.mentors.map((mentor)=>{
-            if(mentor.name === prev){
-                return {...mentor, name:current}
-            }
-            return {...mentor}
-        })}))
+        dispatch({type: 'update', name: prev, title: current})
     }
 
     const addMentor = ()=>{
         const name = prompt('what is new mentor name?')
         const title = prompt('what is mentor title?')
-
-        setPerson((prev)=>({...prev, mentors: [...prev.mentors, {name: name, title:title}]}))
+        dispatch({type:'add', mentor:{name, title}})
 
     }
     
     const deleteMentor = ()=>{
         const name = prompt('what is new mentor name?')
-        
-        setPerson((prev)=>({...prev, mentors: prev.mentors.filter(mentor=>mentor.name !== name)}))
+        dispatch({type:'delete', name})
     }
 
     return (
