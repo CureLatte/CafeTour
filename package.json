@@ -9,11 +9,13 @@
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "immer": "^9.0.19",
     "list": "^2.0.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "serve": "^14.1.2",
+    "use-immer": "^0.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -28,8 +30,18 @@
       "react-app/jest"
     ],
     "rules": {
-      "indent": ["error", 4],
-      "no-unused-vars": ["warn", { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }]
+      "indent": [
+        "error",
+        4
+      ],
+      "no-unused-vars": [
+        "warn",
+        {
+          "vars": "local",
+          "args": "after-used",
+          "ignoreRestSiblings": false
+        }
+      ]
     }
   },
   "browserslist": {
