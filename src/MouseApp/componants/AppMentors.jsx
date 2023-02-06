@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ç() {
+export default function() {
     const [person, setPerson] = useState({
         name: '엘리',
         title: '개발자',
@@ -15,6 +15,17 @@ export default function ç() {
             },
         ],
     });
+
+    const updateMentor = () => {
+        const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
+        const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
+        setPerson((prev_person)=>({...prev_person, mentors: prev_person.mentors.map((mentor)=>{
+            if(mentor.name === prev){
+                return {...mentor, name:current}
+            }
+            return {...mentor}
+        })}))
+    }
 
     const addMentor = ()=>{
         const name = prompt('what is new mentor name?')
@@ -43,26 +54,9 @@ export default function ç() {
                     </li>
                 ))}
             </ul>
-            <button
-                onClick={() => {
-                    const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
-                    const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-                    setPerson((prev_person)=>({...prev_person, mentors: prev_person.mentors.map((mentor)=>{
-                        if(mentor.name === prev){
-                            return {...mentor, name:current}
-                        }
-                        return {...mentor}
-                    })}))
-                }}
-            >
-                멘토의 이름을 바꾸기
-            </button>
-            <button onClick={addMentor}>
-                멘토 이름 추가
-            </button>
-            <button onClick={deleteMentor}>
-                멘토 이름 삭제
-            </button>
+            <button onClick={updateMentor}> 멘토의 이름을 바꾸기 </button>
+            <button onClick={addMentor}>멘토 이름 추가 </button>
+            <button onClick={deleteMentor}> 멘토 이름 삭제</button>
         </div>
     );
 }
