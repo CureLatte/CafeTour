@@ -1,0 +1,21 @@
+.container{
+    width:50%;
+    height: 100%;
+    margin: auto;
+}
+
+.header{
+    font-size: 3em;
+    background-color: #00003a;
+    color: beige;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.toggleButton{
+    width: 50%;
+    height: 4em;
+    background-color: darkslateblue;
+    color: beige;
+    margin: auto 2em auto 1em;
+}
