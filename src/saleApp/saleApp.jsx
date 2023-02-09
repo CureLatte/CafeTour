@@ -1,37 +1,18 @@
-import {useEffect, useState} from 'react'
+import { useState} from 'react'
 import './app.css'
 import ErrorComponent from "./components/error";
 import Loading from "./components/loading";
+import useProduct from "../hooks/product";
 
 
 export default function SaleApp(){
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
-    const [item, setItem] = useState([]);
     const [toggle, setToggle] = useState(true)
-
-    const getDataApi = async ()=>{
-        const fileName = toggle ? 'items' : 'sale'
-        const response = await fetch(`/data/${fileName}.json`)
-        const result = await response.json()
-        console.log('hello')
-        setItem(result)
-    }
+    const [loading, error, item] = useProduct({checked:toggle})
 
     const buttonToggle = ()=>{
         setToggle((prev)=>(!prev))
     }
 
-    useEffect(() => {
-        setLoading(true)
-        setError(undefined)
-        getDataApi()
-            .catch((err)=>{setError(err)})
-            .finally(()=>setLoading(false))
-        return () => {
-
-        };
-    }, [toggle]);
 
     if (loading) return <Loading/>
 
