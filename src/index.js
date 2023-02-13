@@ -8,14 +8,15 @@ import reportWebVitals from "./reportWebVitals";
 // import AppMentors from "./mentorsApp/AppMentors"
 // import AppMentorsImmer from "./mentorsApp/AppMentorsImmer";
 // import AppTheme from "./AppTheme/AppTheme";
-import SaleApp from "./saleApp/saleApp";
+//import SaleApp from "./saleApp/saleApp";
+import ToDoApp from "./toDoApp/toDoApp";
 
 // 전역 설정이 가능함
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <SaleApp />
+        <ToDoApp />
     </React.StrictMode>
 );
 reportWebVitals();
