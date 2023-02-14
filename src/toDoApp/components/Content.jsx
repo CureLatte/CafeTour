@@ -1,5 +1,12 @@
+import Row from "./Row";
+import style from '../css/content.module.css'
+
 export default function Content(){
     return (
-        <div>내용들</div>
+        <div className={style.content}>
+            <Row></Row>
+            <Row></Row>
+            <Row></Row>
+        </div>
     )
 }

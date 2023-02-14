@@ -1,13 +1,13 @@
-import '../css/header.modules.css'
+import style from  '../css/header.module.css'
 
 export default function Header(){
     return (
-        <div className="header">
-            <img src='/images/darkMode.png' alt="error" className="darkMode"/>
-            <div className="tabsContainer">
-                <span className="tabs">All</span>
-                <span className="tabs">active</span>
-                <span className="tabs">completed</span>
+        <div className={style.header}>
+            <img src='/images/darkMode.png' alt="error" className={style.darkMode}/>
+            <div className={style.tabsContainer}>
+                <span className={style.tabs}>All</span>
+                <span className={style.tabs}>active</span>
+                <span className={style.tabs}>completed</span>
             </div>
         </div>
     )

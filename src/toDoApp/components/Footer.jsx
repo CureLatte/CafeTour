@@ -1,5 +1,9 @@
+import style from '../css/footer.module.css'
+
 export default function Footer(){
     return (
-        <div>footer</div>
+        <div className={style.container}>
+            <div className={style.searchBar}>검색</div>
+        </div>
     )
 }
