@@ -5,8 +5,6 @@ export default function Tab({title}){
     const tabTitle = useRef(null)
     const tabBar = useRef(null)
 
-
-
     useEffect(() => {
         // px 길이 세팅
         tabBar.current.style.width=tabTitle.current.clientWidth.toString() + "px"
