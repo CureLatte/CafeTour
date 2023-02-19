@@ -1,7 +1,7 @@
 import style from "../css/header.module.css";
 import {useEffect, useRef} from "react";
 
-export default function Tab({title}){
+export default function Tab({title, onclick}){
     const tabTitle = useRef(null)
     const tabBar = useRef(null)
 
@@ -15,7 +15,7 @@ export default function Tab({title}){
 
 
     return (
-        <span className={style.tabs} ref={tabTitle}>
+        <span className={style.tabs} ref={tabTitle} onClick={onclick}>
             <p>{title}</p>
             <div className={style.tabsBar} ref={tabBar}/>
         </span>

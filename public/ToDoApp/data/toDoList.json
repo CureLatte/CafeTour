@@ -3,5 +3,15 @@
         "title": "새로운 메모",
         "check": true,
         "activate": false
+    },
+    {
+        "title": "새로운 메모2",
+        "check": false,
+        "activate": false
+    },
+    {
+        "title": "새로운 메모3",
+        "check": true,
+        "activate": false
     }
 ]

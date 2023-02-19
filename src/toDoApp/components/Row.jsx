@@ -1,19 +1,17 @@
 import style from '../css/row.module.css'
-import {useState} from "react";
 
 export default function Row({row}){
-    console.log('row: ', row)
-    const initCheck = row.check
-    const [check, setCheck] = useState(initCheck)
-    const toggleCheck = ()=>{
-        setCheck((prevCheck)=>!prevCheck)
-    }
 
+    const toggleCheck = (e)=>{
+        const status = e.target.checked
+        e.target.checked = !status
+        console.log(status)
+    }
 
     return (
         <div className={style.row}>
             <div className={style.contentWrapper}>
-                <input className={style.checkBox} type="checkbox" checked={check} onChange={toggleCheck}/>
+                <input className={style.checkBox} type="checkbox" checked={row.check || false} onChange={toggleCheck}/>
                 <div className={style.content}>{row.title}</div>
             </div>
             <img src="/images/trash.png" alt="trash" className={style.trashButton}></img>
