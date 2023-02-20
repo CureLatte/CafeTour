@@ -6,6 +6,7 @@ export default function Row({row}){
         const status = e.target.checked
         e.target.checked = !status
         console.log(status)
+        console.log(status)
     }
 
     return (
