@@ -26,7 +26,7 @@ export default function SaleApp(){
                     return <li key={index}>{item.name} : {item.price}</li>
                 })}
             </div>
-            <button className="toggleButton" onClick={buttonToggle}>{toggle? '세일 목록 보기!': '전체 목록 보기'}</button>
+            <button className="toggleButton" onClick={buttonToggle}>{toggle? '세일 목록 보기 !': '전체 목록 보기'}</button>
         </div>
     )
 }
