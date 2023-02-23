@@ -32,7 +32,7 @@ export default function Content({type}){
     return (
         <div className={style.content}>
             {row.map((rowData, index) => {
-                return <Row key={index} row={rowData}/>
+                return <Row key={index} rowData={rowData} />
             })}
         </div>
     )

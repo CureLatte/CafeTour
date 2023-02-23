@@ -1,12 +1,15 @@
 import style from '../css/row.module.css'
+import {useState} from "react";
 
-export default function Row({row}){
+export default function Row({rowData}){
+    const [row, setRow] = useState(rowData)
 
     const toggleCheck = (e)=>{
         const status = e.target.checked
-        e.target.checked = !status
         console.log(status)
-        console.log(status)
+        setRow(prev=>({...prev, check:!status}))
+        console.log('target',e.target)
+
     }
 
     return (
