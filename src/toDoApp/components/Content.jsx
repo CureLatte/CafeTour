@@ -1,13 +1,15 @@
 import Row from "./Row";
 import style from '../css/content.module.css'
 import {useEffect, useState} from "react";
+import toDoListJson from "../data/toDoList.json"
 
 export default function Content({type}){
     const [row, setRow] = useState([])
 
     const dataRequest = async ()=>{
-        const dataResponse = await fetch('./toDoApp/data/toDoList.json')
-        const dataJson = await dataResponse.json()
+        // const dataResponse = await fetch('../data/toDoList.json')
+        const dataJson = toDoListJson
+
         if (type === 1){
             return dataJson.filter(data => data.check === false)
         } else if (type === 2){
